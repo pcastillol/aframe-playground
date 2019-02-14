@@ -5,7 +5,7 @@
     <title>Our first scene in the A-Frame Playground</title>
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <!-- <script src="aframe.min.js"></script> -->
-    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.1/dist/aframe-extras.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.1/dist/aframe-extras.min.js"></script> <!-- plugin para verlo con las gafas VR -->
   </head>
   <body>
     <a-scene fog="type: linear; color: lightgrey; far: 15; near: 1" stats>
@@ -36,8 +36,9 @@
 
       <a-sky color="lightgrey"></a-sky>
 
+      <!-- estos dos entities son necesarios para desplazarte por el escenario a través de las gafas VR -->
       <a-entity movement-controls="fly: true" position="0 0 3">
-        <a-entity camera position="0 1.6 0" look-controls></a-entity>
+        <a-entity camera position="0 1.6 0" look-controls></a-entity> <!-- las coordenadas de camera position son relativas a las absolutas, a las que aparecen en position -->
       </a-entity>
 
     </a-scene>
